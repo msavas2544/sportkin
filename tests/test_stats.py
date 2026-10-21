@@ -43,7 +43,9 @@ def test_icc_against_pingouin_if_available():
     long = pd.DataFrame([(i, j, data[i, j]) for i in range(25) for j in range(2)],
                         columns=["s", "r", "v"])
     ref = pg.intraclass_corr(long, "s", "r", "v").set_index("Type")
-    for model, key in [("2,1", "ICC(A,1)"), ("3,1", "ICC(C,1)")]:
+    # pingouin renamed the ICC types between versions: "ICC2" -> "ICC(A,1)"
+    for model, keys in [("2,1", ("ICC(A,1)", "ICC2")), ("3,1", ("ICC(C,1)", "ICC3"))]:
+        key = next(k for k in keys if k in ref.index)
         assert icc(data, model).value == pytest.approx(ref.loc[key, "ICC"], abs=1e-9)
 
 
