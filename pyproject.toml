@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sportkin"
+dynamic = ["version"]
+description = "Offline, camera-based kinematics, jump analysis and reliability statistics for sport science"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Muhammet Savaş" }]
+keywords = [
+    "biomechanics", "sport science", "kinematics", "pose estimation",
+    "jump height", "flight time", "reliability", "ICC", "Bland-Altman",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+# Core is deliberately small: angles, filtering, jump and statistics
+# work offline with NumPy and SciPy only.
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.8",
+]
+
+[project.optional-dependencies]
+# Video decoding and pose estimation (model file is downloaded once, then cached)
+video = ["opencv-python>=4.7", "mediapipe>=0.10.14"]
+# APA tables (Word) and Bland-Altman figures
+report = ["matplotlib>=3.5", "python-docx>=1.1"]
+dev = ["pytest>=7", "pytest-cov", "build", "pingouin"]
+all = ["sportkin[video,report]"]
+
+[project.scripts]
+sportkin = "sportkin.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/msavas2544/sportkin"
+Issues = "https://github.com/msavas2544/sportkin/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "sportkin.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "sportkin: offline, camera-based kinematics and reliability statistics for sport science"
+type: software
+authors:
+  - family-names: "Savaş"
+    given-names: "Muhammet"
+    orcid: "https://orcid.org/0009-0003-3702-011X"
+    affiliation: "Atatürk University, Institute of Winter Sports and Sport Sciences"
+version: 0.1.0.dev0
+license: MIT
+repository-code: "https://github.com/msavas2544/sportkin"
+keywords:
+  - biomechanics
+  - sport science
+  - kinematics
+  - jump height
+  - reliability

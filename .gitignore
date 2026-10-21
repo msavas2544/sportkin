@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+.venv/
+venv/
+# participant videos and model files must never be committed
+*.mp4
+*.mov
+*.avi
+*.task
