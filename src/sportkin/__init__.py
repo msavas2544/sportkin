@@ -25,7 +25,7 @@ from .kinematics import (
 )
 from .stats import agreement, bland_altman, icc, interpret_icc, reliability, typical_error
 
-__version__ = "0.1.0.dev0"
+__version__ = "0.1.0"
 
 __all__ = [
     "__version__",

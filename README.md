@@ -3,7 +3,7 @@
 **Offline, camera-based kinematics, jump analysis and reliability statistics for sport science.**
 **Spor bilimleri için çevrimdışı, kamera tabanlı kinematik, sıçrama analizi ve güvenirlik istatistikleri.**
 
-> Status: `0.1.0.dev0`, early development. Not yet validated against a criterion
+> Status: `0.1.0`, early development. Not yet validated against a criterion
 > device; do not use for decisions about athletes until a validation study is published.
 
 ---
