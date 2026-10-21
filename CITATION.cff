@@ -9,6 +9,14 @@ authors:
     affiliation: "Atatürk University, Institute of Winter Sports and Sport Sciences"
 version: 0.1.0
 date-released: "2026-10-21"
+doi: 10.5281/zenodo.23527829
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23527829
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.23527830
+    description: "Version 0.1.0"
 license: MIT
 repository-code: "https://github.com/msavas2544/sportkin"
 keywords:

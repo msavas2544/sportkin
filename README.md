@@ -1,5 +1,9 @@
 # sportkin
 
+[![tests](https://github.com/msavas2544/sportkin/actions/workflows/tests.yml/badge.svg)](https://github.com/msavas2544/sportkin/actions/workflows/tests.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23527829.svg)](https://doi.org/10.5281/zenodo.23527829)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **Offline, camera-based kinematics, jump analysis and reliability statistics for sport science.**
 **Spor bilimleri için çevrimdışı, kamera tabanlı kinematik, sıçrama analizi ve güvenirlik istatistikleri.**
 
@@ -129,8 +133,14 @@ sportkin agreement veri.csv --a video_cm --b mat_cm --name-b "Kontak mat" --lang
 
 ## Citation / Atıf
 
-If you use `sportkin` in research, please cite it (see `CITATION.cff`).
-A Zenodo DOI will be added with the first release.
+If you use `sportkin` in research, please cite it (see `CITATION.cff`):
+
+> Savaş, M. (2026). *sportkin: Offline, camera-based kinematics and reliability statistics
+> for sport science* (Version 0.1.0) [Computer software]. Zenodo.
+> https://doi.org/10.5281/zenodo.23527829
+
+The DOI above always points to the latest version; version 0.1.0 is
+[10.5281/zenodo.23527830](https://doi.org/10.5281/zenodo.23527830).
 
 ## License
 
